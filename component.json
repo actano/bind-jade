@@ -1,0 +1,9 @@
+{
+    "name": "bind-jade",
+    "version": "0.0.1",
+    "dependencies": {
+        "visionmedia/jade": "1.5.0"
+    },
+    "scripts": ["index.js"],
+    "main": "index.js"
+}
