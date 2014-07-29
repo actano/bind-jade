@@ -3,7 +3,7 @@ var jade = require('jade');
 var extend = function(target, source) {
     var prop, val;
     if (!(target instanceof Object)) {
-        throw new Error("" + target + " is not a object");
+        throw new Error("" + target + " is not an object");
     }
     for (prop in source) {
         val = source[prop];
