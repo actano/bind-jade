@@ -1,0 +1,8 @@
+{
+    "name": "bind-jade",
+    "version": "0.0.1",
+    "main": "index.js",
+    "dependencies": {
+        "jade": "1.10.0"
+    },
+}
