@@ -21,11 +21,11 @@ module.exports = function(maybeTemplate, globals) {
     if (globals != null) {
         return function(locals) {
             extend(globals, locals);
-            return template(globals);
+            return maybeTemplate(globals);
         };
     } else {
         return function(locals) {
-            return template(locals || {});
+            return maybeTemplate(locals || {});
         };
     }
 };
