@@ -1,5 +1,3 @@
-var jade = require('jade');
-
 var extend = function(target, source) {
     var prop, val;
     if (!(target instanceof Object)) {
