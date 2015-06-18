@@ -12,9 +12,7 @@ var extend = function(target, source) {
     return target;
 };
 
-module.exports = function(compiledJade, globals) {
-    var template;
-    template = compiledJade(jade);
+module.exports = function(template, globals) {
     if (globals != null) {
         return function(locals) {
             extend(globals, locals);
