@@ -12,17 +12,20 @@ var extend = function(target, source) {
     return target;
 };
 
-module.exports = function(compiledJade, globals) {
-    var template;
-    template = compiledJade(jade);
+module.exports = function(maybeTemplate, globals) {
+    // check the name of the function
+    if (maybeTemplate.name !== 'template') {
+        maybeTemplate = maybeTemplate(jade);
+    }
+    // otherwise it's wrapped by bind-jade}
     if (globals != null) {
         return function(locals) {
             extend(globals, locals);
-            return template(globals);
+            return maybeTemplate(globals);
         };
     } else {
         return function(locals) {
-            return template(locals || {});
+            return maybeTemplate(locals || {});
         };
     }
 };
