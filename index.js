@@ -1,3 +1,5 @@
+var jade = require('jade');
+
 var extend = function(target, source) {
     var prop, val;
     if (!(target instanceof Object)) {
@@ -10,7 +12,12 @@ var extend = function(target, source) {
     return target;
 };
 
-module.exports = function(template, globals) {
+module.exports = function(maybeTemplate, globals) {
+    // check the name of the function
+    if (maybeTemplate.name !== 'template') {
+        maybeTemplate = maybeTemplate(jade);
+    }
+    // otherwise it's wrapped by bind-jade
     if (globals != null) {
         return function(locals) {
             extend(globals, locals);
