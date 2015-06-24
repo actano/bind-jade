@@ -1,8 +1,8 @@
 {
     "name": "bind-jade",
-    "version": "0.0.2",
+    "version": "0.0.4",
     "dependencies": {
-        "visionmedia/jade": "1.10.0"
+        "visionmedia/jade": "^1.11.0"
     },
     "scripts": ["index.js"],
     "main": "index.js"
