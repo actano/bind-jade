@@ -1,6 +1,7 @@
 {
     "name": "bind-jade",
     "version": "0.0.4",
+    "license": "MIT",
     "main": "index.js",
     "peerDependencies": {
         "jade": "^1.0.0"
